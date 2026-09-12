@@ -1,0 +1,58 @@
+{
+  "name": "mcp-brasil",
+  "version": "0.1.0",
+  "description": "Servidor MCP com tools para dados públicos brasileiros: CEP, CNPJ, CPF, bancos, feriados, municípios e DDD.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mcp-brasil": "bin/mcp-brasil.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsx src/index.ts",
+    "start": "node bin/mcp-brasil.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cep",
+    "cnpj",
+    "cpf",
+    "brasil"
+  ],
+  "author": "Matheus Polli",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "lru-cache": "^11.0.0",
+    "p-retry": "^6.2.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^9.0.0",
+    "msw": "^2.3.0",
+    "prettier": "^3.3.0",
+    "tsup": "^8.2.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
